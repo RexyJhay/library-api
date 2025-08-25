@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express()
-
+const cors = require('cors');
 const port = process.env.PORT || 5124;
 
 const dotenv = require('dotenv');
@@ -11,6 +11,10 @@ const authorRoutes = require('./routes/authorRoutes')
 const cookieParser = require('cookie-parser');
 dotenv.config()
 
+app.use(cors({
+    origin: 'http://localhost:5173', 
+    credentials: true 
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
