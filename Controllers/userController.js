@@ -78,7 +78,7 @@ const getAllUsers = async (req,res)=>{
         if(!myUsers) return res.status(404).json({message:"No server found"});
 
         res.status(200).json(myUsers)
-    } catch {
+    } catch(error) {
         res.status(500).json({message: "Internal server error"})
         console.log(error)
     }
