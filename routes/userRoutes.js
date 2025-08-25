@@ -7,7 +7,7 @@ router.post('/', signup)
 
 router.post('/login', login)
 
-router.get('/',authorize (["admin"]) ,getAllUsers)
+router.get('/' ,getAllUsers)
 
 router.get('/oneuser/:id', get1User)
 
