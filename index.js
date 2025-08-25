@@ -1,8 +1,8 @@
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 const app = express()
 
-const port = 5124;
+const port = process.env.PORT || 5124;
 
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/userRoutes')
